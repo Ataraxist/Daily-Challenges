@@ -56,9 +56,9 @@ function romanToInt(s: string): number {
 
   for (let i = 0; i < s.length; i++) {
     const current = dictionary[s[i]];
-    const prev = dictionary[s[i + 1]];
+    const next = dictionary[s[i + 1]];
 
-    if (prev > current) {
+    if (next > current) {
       result -= current;
     } else {
       result += current;
