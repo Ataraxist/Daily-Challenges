@@ -13,7 +13,7 @@
 // Input: s1 = "ab", s2 = "eidboaoo"
 // Output: false
 
-// Constraints:
+// * Constraints:
 
 // 1 <= s1.length, s2.length <= 104
 // s1 and s2 consist of lowercase English letters.

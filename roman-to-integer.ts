@@ -18,25 +18,25 @@
 // ? C can be placed before D (500) and M (1000) to make 400 and 900.
 // ? Given a roman numeral, convert it to an integer.
 
-// * Example 1:
+// ? Example 1:
 
 // Input: s = "III"
 // Output: 3
 // Explanation: III = 3.
 
-// * Example 2:
+// ? Example 2:
 
 // Input: s = "LVIII"
 // Output: 58
 // Explanation: L = 50, V= 5, III = 3.
 
-// *Example 3:
+// ? Example 3:
 
 // Input: s = "MCMXCIV"
 // Output: 1994
 // Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
-// Constraints:
+// * Constraints:
 
 // 1 <= s.length <= 15
 // s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
