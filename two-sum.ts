@@ -32,4 +32,5 @@ function twoSum(nums: number[], target: number): number[] {
             return [i, index];
         }
     }
-};
+    return []; // Return empty array if no solution found
+}
