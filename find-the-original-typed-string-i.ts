@@ -28,7 +28,7 @@
 // 1 <= word.length <= 100
 // word consists only of lowercase English letters.
 
-function possibleStringCount(word: string): number {
+function possibleStringCountEasy(word: string): number {
     let count = 1;
     for (let i = 0; i < word.length -1; i++){
         if (word[i] === word[i+1]){
