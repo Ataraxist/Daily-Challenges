@@ -29,3 +29,34 @@
 // - [3,2,1,5]
 // - [2,5]
 // - [2,1,5]
+
+function countMaxOrSubsets(nums: number[]): number {
+    let biggestBitwiseOR = 0;
+    let count = 0;
+
+    // 1. Iterate through the input array and calculate the largest bitwise or value
+    for (let i = 0; i < nums.length; i++){
+        biggestBitwiseOR = biggestBitwiseOR | nums[i];
+    }
+
+    // 2. Iterate through all combinations of the input array incrementing a counter when it's bitwise or is eaqual to #1
+    function weFuckingRecursingNow(index: number, currentOR: number): void {
+        // base case
+        if (index === nums.length){
+            if (currentOR === biggestBitwiseOR){
+                count++;
+            }
+            return;
+        }
+
+        // check if including nums[index] in the subset will update biggestBitwiseOR 
+        weFuckingRecursingNow(index + 1, currentOR | nums[index]);
+
+        // and then check if excluding nums[index] from the subset will update biggestBitwiseOR
+        weFuckingRecursingNow(index + 1, currentOR);
+    }
+    
+    weFuckingRecursingNow(0, 0);
+
+    return count;
+}
