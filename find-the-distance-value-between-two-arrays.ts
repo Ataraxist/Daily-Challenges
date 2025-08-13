@@ -44,21 +44,22 @@ function findTheDistanceValue(arr1: number[], arr2: number[], d: number): number
     // make a counter
     let counter = 0
     // make a bool
-    let isValid = true
+    let countable = true
 
     // iterate through the first array
     for (let i = 0; i < arr1.length; i++){
-        // check the absolute difference between the array 1 value and all array 2 values
+        // iterate through the second array
         for (let j = 0; j < arr2.length; j++){
+            // check the absolute difference between them
             if (Math.abs(arr1[i] - arr2[j]) <= d){
-                isValid = false
+                // if the value is less than d, set the bool to false
+                countable = false
+                // stop checking values in the second array for this array 1 value
                 break;
             } 
         }
         // check the bool and increment the counter if valid
-        if (isValid) {
-            counter++
-        }
+        if (countable) counter++
     }
     // return the count of valid elements
     return counter
